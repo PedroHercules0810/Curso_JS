@@ -62,6 +62,7 @@ console.log(`O tipo da variavel ${var8} eh ${typeof(var8)}`);
 
 // entrada de dados
 
+/*
 let nome = prompt('Digite seu nome:');
 
 let sobrenome = prompt('Digite seu sobrenome:');
@@ -71,3 +72,25 @@ let idade = prompt('Digite sua idade:');
 id = 01;
 
 console.log(`Olah, ${nome} ${sobrenome}, voceh tem ${idade} anos e seu ID eh ${id}`);
+*/
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+let nome = prompt('Digite seu nome:');
+
+let sobrenome = prompt('Digite seu sobrenome:');
+
+let idade = prompt('Digite sua idade:');
+
+id = getRandomInt(1,999);
+
+if (idade < 18) {
+    alert("Você é menor de idade.")
+} else {
+    alert(`Acesso liberado para ${nome} ${sobrenome}, sua idade: ${idade} é maior ou igual 18 anos.`)
+    console.log(`Olah, ${nome} ${sobrenome}, voceh tem ${idade} anos e seu ID eh ${id}`);
+}
